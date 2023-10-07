@@ -15,3 +15,18 @@ Install express and mongoose
 npm install express mongoose
 npm install --save-dev @types/mongoose @types/express
 ```
+
+Install Firebase admin
+```sh
+npm install firebase-admin
+```
+
+Install ts-node-dev
+```sh
+npm i ts-node-dev
+```
+
+Run server
+```sh
+npx ts-node-dev src/server.ts
+```
