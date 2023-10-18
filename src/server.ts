@@ -5,6 +5,8 @@ import config from './config/config';
 import mongoose, { mongo } from 'mongoose';
 import firebaseAdmin from 'firebase-admin';
 
+import userRoutes from './routes/user';
+
 const router = express();
 
 // Handle server
@@ -52,6 +54,9 @@ router.use((req, res, next) => {
     next();
 });
 
+// Routes
+router.use('/users', userRoutes);
+
 // Handle errors
 router.use((req, res, next) => {
     const error = new Error('Not found');
@@ -62,5 +67,5 @@ router.use((req, res, next) => {
 
 // Listen for requests
 httpServer.listen(config.server.port, () => {
-    logging.info(`Server running at ${config.server.host}:${config.server.port}.`)
-})
+    logging.info(`Server running at ${config.server.host}:${config.server.port}.`);
+});
