@@ -1,5 +1,5 @@
 import logging from '../config/logging';
-import { firesbaseAdmin } from 'firebase-admin';
+import firesbaseAdmin from 'firebase-admin';
 import { Request, Response, NextFunction } from 'express';
 
 const extractFirebaseInfo = (req: Request, res: Response, next: NextFunction) => {
@@ -9,7 +9,7 @@ const extractFirebaseInfo = (req: Request, res: Response, next: NextFunction) =>
     if (token) {
         firesbaseAdmin
             .auth()
-            .verifyToken(token)
+            .verifyIdToken(token)
             .then((result) => {
                 if (result) {
                     // Add info to response
