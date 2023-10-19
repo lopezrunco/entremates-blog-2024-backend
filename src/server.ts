@@ -1,11 +1,13 @@
 import http from 'http';
 import express from 'express';
+
 import logging from './config/logging';
 import config from './config/config';
 import mongoose, { mongo } from 'mongoose';
 import firebaseAdmin from 'firebase-admin';
 
 import userRoutes from './routes/user';
+import blogRoutes from './routes/blog';
 
 const router = express();
 
@@ -56,6 +58,7 @@ router.use((req, res, next) => {
 
 // Routes
 router.use('/users', userRoutes);
+router.use('/blogs', blogRoutes);
 
 // Handle errors
 router.use((req, res, next) => {
