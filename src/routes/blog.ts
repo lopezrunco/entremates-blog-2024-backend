@@ -3,7 +3,7 @@ import controller from '../controllers/blog';
 
 const router = express.Router();
 
-router.get('/:blogID', controller.read);
+router.get('/read/:blogID', controller.read);
 router.post('/create', controller.create);
 router.post('/query', controller.query);
 router.patch('/update/:blogID', controller.update);
