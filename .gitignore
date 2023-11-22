@@ -1,3 +1,4 @@
 /node_modules
 src/config/config.ts
 src/config/serviceAccountKey.json
+build
