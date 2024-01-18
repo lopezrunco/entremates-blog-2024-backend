@@ -1,6 +1,0 @@
-services:
-  - name: emyoy-api
-    type: web
-    env: node
-    buildCommand: npm run build
-    startCommand: node build/server.js
