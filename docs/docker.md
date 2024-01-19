@@ -25,7 +25,7 @@
     FROM node:14-alpine
 
     # Set the working directory in the container
-    WORKDIR /usr/src/app
+    WORKDIR /usr/src/server
 
     # Copy package.json and package-lock.json to the working directory
     COPY package*.json ./
@@ -50,12 +50,12 @@ Once you have your Dockerfile, you can build the Docker image and run the contai
 
 - Build the Docker image (run this command in the same directory of the Dockerfile)
 ```sh
-    docker build -t emyoy-client .
+    docker build -t emyoy-server .
 ```
 
 - Run the Docker container
 ```sh
-    docker run -p 1337:1337 emyoy-client
+    docker run -p 1337:1337 emyoy-server
 ```
 
 ### Permission denied error:
