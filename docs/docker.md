@@ -75,3 +75,24 @@ To solve this issue on Kali Linux:
 ```sh
     docker run hello-world
 ```
+
+## Deploy to Docker hub:
+
+- Log in to your Docker Hub account
+
+```sh
+    docker login
+```
+
+- Tag your Docker image, example:
+```sh
+    docker tag emyoy-server:latest viejobucanero/emyoy-server:latest
+```
+
+- Push the Docker image to Docker Hub:
+```sh
+    docker push viejobucanero/emyoy-server:latest
+```
+
+- Visit the Docker Hub website (https://hub.docker.com) and log in to your account. You should see your pushed Docker image in your Docker Hub repository.
+
